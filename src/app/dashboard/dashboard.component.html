@@ -1,0 +1,53 @@
+<button name="getAll" (click)='getData("All")'>Get All Stations</button>
+<br><br>
+<button name="getDhc" (click)='getData("Den Haag Centraal")'>Get Den Haag Station(GVC) Departures</button>
+<br><br>
+
+<div name="error" *ngIf="errorMessage" >
+    <strong>Warning!</strong> {{errorMessage}}
+ </div>
+ <div *ngIf="stationName == 'Den Haag Centraal'">
+
+
+<div *ngIf=data>
+  <h3>{{stationName}} Departures</h3>
+<table class='center-div' name="data">
+  <thead>
+    <tr>
+      <td>Planned departure time</td>
+      <td>Direction</td>
+      <td>Platform</td>
+      <td>Train type</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let d of data.departures;">
+      <td>{{d.planned_departure_time | date: 'medium'}}</td>
+      <td>{{d.direction}}</td>
+      <td>{{d.platform}}</td>
+      <td>{{d.train_type}}</td>
+
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div *ngIf="stationName == 'All'">
+  <h3>{{stationName}} Departures</h3>
+<table class='center-div' name="data">
+  <thead>
+    <tr>
+      <td>Station Name</td>
+      <td>Station Code</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let d of data;">
+      <td>{{d.name}}</td>
+      <td>{{d.code}}</td>
+
+    </tr>
+  </tbody>
+</table>
+</div>
