@@ -26,5 +26,6 @@ Command: ng test
 
 # Get Den Haag Centraal Station Departures
 
-![image](https://user-images.githubusercontent.com/48081601/132117497-2ff21795-b6ad-4ae9-b84f-50ddebe69861.png)
+![image](https://user-images.githubusercontent.com/48081601/132133436-e7607b2a-ee3e-472c-be63-19e95a0d322d.png)
+
 
